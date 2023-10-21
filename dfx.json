@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "smart_biodigestor_backend": {
+      "main": "src/smart_biodigestor_backend/main.mo",
+      "type": "motoko"
+    },
+    "smart_biodigestor_frontend": {
+      "dependencies": [
+        "smart_biodigestor_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/smart_biodigestor_frontend/src/index.html"
+      },
+      "source": [
+        "src/smart_biodigestor_frontend/assets",
+        "dist/smart_biodigestor_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
